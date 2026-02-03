@@ -5,7 +5,7 @@ import pandas as pd
 # -------------------------
 # 1. Load trained model
 # -------------------------
-model_file = r"C:\Users\ASUS\OneDrive\Desktop\tomato-quality production\data\tomato_quality_model.joblib"
+model_file = r"...path\tomato-quality production\data\tomato_quality_model.joblib"
 if not os.path.exists(model_file):
     raise Exception(f"Model file not found at {model_file}")
 
@@ -32,3 +32,4 @@ new_batch = pd.DataFrame([{
 features = ['temp_morning', 'temp_evening', 'humidity', 'ph', 'water_flow', 'fertilizer', 'production_speed', 'avg_temp']
 predicted_quality = model.predict(new_batch[features])
 print("Predicted quality for new batch:", round(predicted_quality[0], 2))
+
