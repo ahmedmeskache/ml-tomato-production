@@ -11,7 +11,7 @@ from feature_engineering import add_features
 # -------------------------
 # 1. Load data
 # -------------------------
-data_path = r"C:\Users\ASUS\OneDrive\Desktop\tomato-quality production\data\sample_data.csv"
+data_path = r".....path\tomato-quality production\data\sample_data.csv"
 data = load_data(data_path)
 if data is None:
     raise Exception("Data loading failed. Exiting.")
@@ -53,3 +53,4 @@ print(f"R² Score: {r2:.2f}")
 model_file = os.path.join(os.path.dirname(data_path), "tomato_quality_model.joblib")
 joblib.dump(model, model_file)
 print(f"Trained model saved at: {model_file}")
+
